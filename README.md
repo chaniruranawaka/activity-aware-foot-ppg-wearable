@@ -1,21 +1,44 @@
-# Smart Shoe
+# Activity-Aware Foot-Based PPG Wearable
 
-This repository contains the Smart Shoe project, including firmware, mobile app, and supporting documentation.
+An experimental wearable sensing platform that investigates activity-aware physiological monitoring using foot-based photoplethysmography and inertial sensing.
 
-## Structure
+This project explores whether physiological trends can be monitored from the foot using a shoe-integrated wearable system. The prototype uses a MAX30102 pulse oximeter sensor for foot-based PPG sensing, an MPU6050 inertial measurement unit for motion-level detection, an ESP32-C3 microcontroller for sensor acquisition and wireless communication, and a Flutter mobile application for live visualization.
 
-- `firmware/` — embedded firmware source and configuration for the shoe hardware.
-- `mobile-app/` — Flutter mobile application and platform-specific project files.
-- `docs/` — project documentation and design notes.
-- `images/` — project images and visual assets.
+---
 
-## Getting Started
+## Project Overview
 
-1. Open `mobile-app/smart_shoe/` in your IDE for the Flutter mobile app.
-2. Open `firmware/` in PlatformIO or your embedded toolchain for firmware development.
+The main goal of this project is to explore the feasibility and limitations of foot-based physiological sensing during physical activity.
 
-## Notes
+Unlike typical pulse oximeter systems that use the finger, this project investigates the possibility of placing the PPG sensor inside a shoe and observing physiological trends while the user is moving. The system was tested during jogging, where the mobile app displayed live SpO₂ trend data and motion-level readings.
 
-- The mobile app targets multiple platforms and uses Flutter.
-- The firmware is built for the shoe's microcontroller and includes sensor/communication logic.
-- Keep platform-specific dependencies updated in `android/`, `ios/`, `linux/`, `macos/`, `web/`, and `windows/` as needed.
+This project is designed as an experimental research prototype, not as a medical device.
+
+---
+
+## Research Focus
+
+This project focuses on:
+
+- Foot-based photoplethysmography sensing
+- Activity-aware physiological trend monitoring
+- Inertial sensing for movement detection
+- Wearable system prototyping
+- Real-time mobile app visualization
+- Motion-related PPG signal behavior
+- Feasibility testing under real-world movement conditions
+
+---
+
+## System Architecture
+
+```text
+MAX30102 PPG Sensor + MPU6050 IMU
+                ↓
+        ESP32-C3 Super Mini
+                ↓
+      Bluetooth / Serial Communication
+                ↓
+        Flutter Mobile Application
+                ↓
+ Live SpO₂ Trend + Motion Level Visualization
