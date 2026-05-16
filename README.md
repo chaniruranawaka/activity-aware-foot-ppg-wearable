@@ -37,7 +37,7 @@ MAX30102 PPG Sensor + MPU6050 IMU
                 ↓
         ESP32-C3 Super Mini
                 ↓
-      Bluetooth / Serial Communication
+        WiFi Communication
                 ↓
         Flutter Mobile Application
                 ↓
